@@ -1,4 +1,7 @@
+import WatchlistButton from "./WatchlistButton";
+
 interface MovieDetail {
+imdbID: string;
   Title: string;
   Year: string;
   Poster: string;
@@ -39,6 +42,7 @@ export default async function MoviePage({
             {movie.Year} • {movie.Runtime} • {movie.Genre}
           </p>
           <p className="mb-4">{movie.Plot}</p>
+          <WatchlistButton movie={movie} />
           <p>
             <span className="font-semibold">Director:</span> {movie.Director}
           </p>
